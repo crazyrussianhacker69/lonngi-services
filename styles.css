@@ -1,0 +1,349 @@
+/************************************
+* Fonts
+************************************/
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('./fonts/proxima_nova.woff2') format('woff2');
+
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('./fonts/proxima_nova_a_bold.woff2') format('woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+/************************************
+* Global Styling
+************************************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Proxima Nova;
+    text-align: center;
+    background-color: rgb(245, 242, 219);
+}
+
+button{
+        cursor: pointer;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    color: purple;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/************************************
+* Re-used Classes
+************************************/
+
+.hidden {
+    transform: translateX(100%);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fadeInLoad {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: .2s;
+}
+
+.sectionOverlay {
+    padding: 40px 0 0;
+}
+
+.contentContainer {
+    margin: 0 12px;
+    padding: 24px;
+    border: 1px solid rgb(0,0,0,0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 14px -8px rgb(0, 0, 0, .5);
+    background-color: whitesmoke;
+}
+
+.hMarginBottom {
+    margin: 0 0 12px;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.novaBold {
+    font-family: Proxima Nova Bold;
+}
+
+.titleContainer {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.titleBody {
+    font-size: 22px;    
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.fitContent {
+    width: fit-content;
+}
+
+.horizontalLine {
+    margin: 1.5rem 0;
+}
+
+.marginBottomSmall {
+    margin: 0 0 16px;
+}
+
+.marginBottomMedium {
+    margin: 0 0 24px;
+}
+
+.marginBottomLarge {
+    margin: 0 0 40px;
+}
+
+.marginTopLarge {
+    margin: 40px 0;
+}
+
+.button {
+    font-family: Proxima Nova Bold;
+    font-size: 20px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.30s ease;
+    border: none;
+}
+
+.button:hover {
+    filter: brightness(0.7);
+    transform: scale(1.025);
+}
+
+.invisibleContainer {
+    padding: 0 8px;
+}
+
+.noBullets {
+    list-style-type: square;
+}
+
+.serviceContainer {
+    margin: 24px 12px 0;
+    padding: 24px;
+    border: 1px solid rgb(0,0,0,0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 14px -8px rgb(0, 0, 0, .5);
+    background-color: whitesmoke;
+    text-align: left;
+}
+
+.serviceTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.flexService {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.arrowPointingRight {
+    align-self: center;
+}
+
+/************************************
+* Specific Elements
+************************************/
+
+.topBar {
+    /* Position */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    /* Sizing */
+    height: 30px;
+    padding: 12px;
+
+    /* Style */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    /*
+    background-color: rgb(39, 255, 0, 0.3);
+    */
+    background-color: rgb(80, 85, 45, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.topBar button {
+    /* Size */
+    height: 100%;
+    
+    /* Position */
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    translate: 0 -50%;
+    
+    /* Style */
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.topBar img {
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    left: 8px;
+    padding: 1px 6px;
+}
+
+.whatsappBtn {
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    width: 55px;
+    height: 55px;
+    background: #3fc550;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 6px 24px 0 rgba(7, 94, 84, .24);
+    transition: all 0.30s ease;
+    border: none;
+    z-index: 1;
+}
+
+.whatsappBtn:hover {
+    filter: brightness(0.7);
+}
+
+.whatsappLogo {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero h1 {
+    font-family: Proxima Nova Bold;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0px 0px 12px;
+    text-wrap: pretty;
+}
+
+.hero p {
+    text-align: left;
+    font-size: 16px;
+    margin: 0px 0px 24px;
+}
+
+#exploreServices {
+    background-color: rgb(244, 155, 155);
+    color: white;
+}
+
+.hero button:hover {
+    filter: brightness(0.7);
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contactFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactIcon {
+    fill: rgb(150, 169, 198);
+    stroke: whitesmoke;
+    align-self: center;
+}
+
+.contactItem {
+    display: flex;
+    gap: 1rem;
+}
+
+.contactLink {
+    text-decoration: none;
+    color: black;
+}
+
+#whatsappBtn {
+    background-color: #3fc550;
+    color: white;
+}
+
+#whatsappIcon {
+    align-self: center;
+}
+
+#insideBtnFlex {
+    display: flex;
+    gap: 1.3vw;
+    justify-content: center;
+}
+
+#sidePanel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(245, 242, 219);
+    transition: transform .8s;
+}
+
+#serviceSectionDesc {
+    margin: 0;
+}
+
