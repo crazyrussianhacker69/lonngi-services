@@ -32,6 +32,7 @@ body {
     font-family: Proxima Nova;
     text-align: center;
     background-color: rgb(245, 242, 219);
+    text-wrap: pretty;
 }
 
 button{
@@ -108,12 +109,20 @@ a:hover {
 }
 
 .titleContainer {
-    font-size: 20px;
+    font-size: 24px;
     text-transform: uppercase;
 }
 
+.regularFontSize {
+    font-size: 20px;
+}
+
+.smallFontSize {
+    font-size: 18px;
+}
+
 .titleBody {
-    font-size: 22px;    
+    font-size: 30px;    
     text-transform: uppercase;
 }
 
@@ -147,7 +156,7 @@ a:hover {
 
 .button {
     font-family: Proxima Nova Bold;
-    font-size: 20px;
+    font-size: 24px;
     width: 100%;
     padding: 8px;
     border-radius: 5px;
@@ -161,7 +170,7 @@ a:hover {
 }
 
 .invisibleContainer {
-    padding: 0 8px;
+    padding: 0 12px;
 }
 
 .noBullets {
@@ -179,7 +188,7 @@ a:hover {
 }
 
 .serviceTitle {
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -267,18 +276,17 @@ a:hover {
     transform: translate(-50%, -50%);
 }
 
-.hero h1 {
+#heroStatement {
     font-family: Proxima Nova Bold;
     text-align: left;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 30px;
     margin: 0px 0px 12px;
-    text-wrap: pretty;
 }
 
-.hero p {
+#heroSubMessage {
     text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0px 0px 24px;
 }
 
@@ -291,8 +299,8 @@ a:hover {
     filter: brightness(0.7);
 }
 
-.hero img {
-    width: 100%;
+#heroImage {
+    height: 400px;
     border-radius: 5px;
 }
 
@@ -345,5 +353,6 @@ a:hover {
 
 #serviceSectionDesc {
     margin: 0;
+    text-wrap: balance;
 }
 

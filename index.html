@@ -48,15 +48,9 @@
 
             <section class="fadeInLoad" id="hero">
                 <div class="sectionOverlay">
-                    <div class="hero contentContainer">
-
-                        <!-- OLD HERO --
-<h1>Nosotros nos encargamos de los números. <br>Usted se encarga de su tranquilidad.</h1>
-<p>Preparación de impuestos profesional y sin estrés para personas, familias y negocios.</p>
--->
-
-                        <h1>Dile adiós al papeleo infinito <br> y a los dolores de cabeza.</h1>
-                        <p>Somos tus aliados en <u><b>preparación de impuestos</b></u> y <u><b>servicios notariales</b></u>. Todo legal, rápido y con la confianza que tu familia y tu negocio necesitan.</p>
+                    <div class="contentContainer">
+                        <h1 id="heroStatement">Dile adiós al papeleo infinito y a los dolores de cabeza.</h1>
+                        <p id="heroSubMessage">Somos tus aliados en <u><b>preparación de impuestos</b></u> y <u><b>servicios notariales</b></u>. Todo legal, rápido y con la confianza que tu familia y tu negocio necesitan.</p>
 
 
                         <a href="#services">
@@ -64,7 +58,7 @@
                                 Nuestros Servicios
                             </button>
                         </a>
-                        <img src="imgs/happy_lady.jpg">
+                        <img src="imgs/happy_lady.jpg" id="heroImage">
                     </div>
                 </div>
             </section>
@@ -75,18 +69,20 @@
                 <div class="sectionOverlay">
                     <div class="contentContainer">
                         <h2 class="novaBold titleContainer hMarginBottom leftAlign">Habla con nosotros</h2>
-                        <p class="marginBottomMedium leftAlign">
+                        <p class="marginBottomMedium leftAlign regularFontSize">
                             Estamos aquí para ayudarte a responder cualquier pregunta que tengas.
                         </p>
+
                         <hr class="horizontalLine">
+
                         <div class="contactFlex">
                             <div class="contactItem">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="contactIcon">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                 </svg>
                                 <div class="leftAlign">
-                                    <div class="novaBold fitContent">Teléfono</div>
-                                    <a href="tel:+19157301151" class="contactLink">(915) 730-1151</a>
+                                    <div class="novaBold fitContent smallFontSize">Teléfono</div>
+                                    <a href="tel:+19157301151" class="contactLink smallFontSize">(915) 730-1151</a>
                                 </div>
                             </div>
 
@@ -96,13 +92,13 @@
                                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                                 </svg>
                                 <div class="leftAlign">
-                                    <div class="novaBold fitContent">Correo Electrónico</div>
-                                    <a href="mailto:judy@lonngi.org" class="contactLink">judy@lonngi.org</a>
+                                    <div class="novaBold fitContent smallFontSize">Correo Electrónico</div>
+                                    <a href="mailto:judy@lonngi.org" class="contactLink smallFontSize">judy@lonngi.org</a>
                                 </div>
                             </div>
                         </div>
                         <hr class="horizontalLine">
-                        <p class="marginBottomMedium leftAlign">
+                        <p class="marginBottomMedium leftAlign regularFontSize">
                             Tambien puedes mandarnos mensaje por Whatsapp!
                         </p>
                         <button id="whatsappBtn" class="button">
@@ -124,14 +120,14 @@
                 <div class="sectionOverlay">
                     <div class="invisibleContainer marginTopLarge">
                         <h2 class="reveal novaBold titleBody hMarginBottom">Nuestros Servicios Principales</h2>
-                        <p class="reveal" id="serviceSectionDesc">Ya sea que necesites declarar tus taxes a tiempo o validar un documento legal importante, aquí lo hacemos fácil, rápido y sin complicaciones.</p>
+                        <p class="reveal regularFontSize" id="serviceSectionDesc">Ya sea que necesites declarar tus taxes a tiempo o validar un documento legal importante, aquí lo hacemos fácil, rápido y sin complicaciones.</p>
                     </div>
 
                     <!-- Tramites y Escrituras -->
 
                     <div class="reveal serviceContainer">
                         <h2 class="novaBold hMarginBottom serviceTitle">Trámites Inmobiliarios y Escrituras</h2>
-                        <p class="marginBottomSmall" >Validamos y gestionamos toda la documentación legal para la compra, venta o traspaso de sus propiedades.</p>
+                        <p class="marginBottomSmall smallFontSize" >Validamos y gestionamos toda la documentación legal para la compra, venta o traspaso de sus propiedades.</p>
 
                         <div class="flexService">
                             <a href="">
@@ -147,7 +143,7 @@
 
                     <div class="reveal serviceContainer">
                         <h2 class="novaBold hMarginBottom serviceTitle">Poderes Notariales (Power of Attorney)</h2>
-                        <p class="marginBottomSmall">Autorice a una persona de su confianza para realizar trámites legales, financieros o vehiculares en su nombre.</p>
+                        <p class="marginBottomSmall smallFontSize">Autorice a una persona de su confianza para realizar trámites legales, financieros o vehiculares en su nombre.</p>
 
                         <div class="flexService">
                             <a href="">
@@ -163,7 +159,7 @@
 
                     <div class="reveal serviceContainer">
                         <h2 class="novaBold hMarginBottom serviceTitle">Certificación de Documentos y Ratificación de Firmas</h2>
-                        <p class="marginBottomSmall">Certificamos copias y ratificamos firmas con sello oficial para que sus trámites avancen sin frenos.</p>
+                        <p class="marginBottomSmall smallFontSize">Certificamos copias y ratificamos firmas con sello oficial para que sus trámites avancen sin frenos.</p>
 
                         <div class="flexService">
                             <a href="">
@@ -179,7 +175,7 @@
 
                     <div class="reveal serviceContainer">
                         <h2 class="novaBold hMarginBottom serviceTitle">Declaración de Impuestos</h2>
-                        <p class="marginBottomSmall">Preparamos sus impuestos personales y de negocio de forma precisa para asegurar su máximo reembolso y total tranquilidad.</p>
+                        <p class="marginBottomSmall smallFontSize">Preparamos sus impuestos personales y de negocio de forma precisa para asegurar su máximo reembolso y total tranquilidad.</p>
 
                         <div class="flexService">
                             <a href="">
