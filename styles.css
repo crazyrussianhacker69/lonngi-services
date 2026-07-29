@@ -201,6 +201,10 @@ a:hover {
     align-self: center;
 }
 
+.wrapperImages {
+    width: 100%;
+}
+
 /************************************
 * Specific Elements
 ************************************/
@@ -356,3 +360,16 @@ a:hover {
     text-wrap: balance;
 }
 
+.swiper {
+    border-radius: 5px;
+}
+
+.swiper-wrapper {
+    transition-timing-function: ease-in-out;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

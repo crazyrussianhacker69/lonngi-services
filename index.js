@@ -19,3 +19,14 @@ const observer = new IntersectionObserver((entries, observer) => {
 revealElements.forEach(element => {
     observer.observe(element);
 });
+
+// Business Images Loop
+// Using Swiper API
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    speed: 2000,
+    autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+    },
+});
