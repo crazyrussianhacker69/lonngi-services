@@ -224,7 +224,7 @@ a:hover {
     width: 115px;
 }
 #footer {
-    background-color: rgb(166, 166, 84, .5);
+    background-color: rgb(166, 166, 84, .4);
     text-align: left;
 }
 
@@ -400,4 +400,8 @@ a:hover {
 
 #copyright {
     font-size: 14px;
+}
+
+#hamburgerBtn {
+    fill: black;
 }
