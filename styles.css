@@ -22,6 +22,10 @@
 /************************************
 * Global Styling
 ************************************/
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
 html {
     scroll-behavior: smooth;
@@ -62,6 +66,9 @@ a:hover {
 /************************************
 * Re-used Classes
 ************************************/
+.uppercase {
+    text-transform: uppercase;
+}
 
 .hidden {
     transform: translateX(100%);
@@ -208,6 +215,22 @@ a:hover {
 /************************************
 * Specific Elements
 ************************************/
+#endNote {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+}
+#footerLogo {
+    width: 115px;
+}
+#footer {
+    background-color: rgb(166, 166, 84, .5);
+    text-align: left;
+}
+
+#footerContainer {
+    padding: 0 12px;
+}
 
 .topBar {
     /* Position */
@@ -221,9 +244,6 @@ a:hover {
 
     /* Style */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    /*
-    background-color: rgb(39, 255, 0, 0.3);
-    */
     background-color: rgb(80, 85, 45, 0.5);
     backdrop-filter: blur(15px);
 }
@@ -372,4 +392,12 @@ a:hover {
     display: block;
     width: 100%;
     height: auto;
+}
+
+#footerLinks {
+    font-weight: bold;
+}
+
+#copyright {
+    font-size: 14px;
 }
