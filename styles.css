@@ -402,6 +402,6 @@ a:hover {
     font-size: 14px;
 }
 
-#hamburgerBtn {
-    fill: black;
+#hamburgerBtn svg{
+    stroke: pink;
 }
