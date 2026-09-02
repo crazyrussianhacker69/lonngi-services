@@ -8,38 +8,56 @@
     </head>
 
     <body>
-
-
-        <!-- IGNORE FOR NOW!
-        <header>
-        </header>
-        -->
-
         <main>
-
             <!-- Top Bar -->
             <div class="topBar">
                 <img src="imgs/logo.png">
                 <button id="hamburgerBtn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" stroke="black">
+                    <svg width="24" height="24" viewBox="0 0 24 24" stroke="black" onclick="openNav()">
                         <line x1="3" y1="6" x2="21" y2="6"/>
                         <line x1="3" y1="12" x2="21" y2="12"/>
                         <line x1="3" y1="18" x2="21" y2="18"/>
                     </svg>
                 </button>
+            </div>
 
-                <!-- COME BACK TO THIS ASAP! -->
-                <!-- MUST CONTINUE WORKING ON SIDE PANEL WHEN POSSIBLE -->
-                <!--
-                <div class="hidden" id="sidePanel">
+            <!-- Side Nav -->
+            <div class="darkFilter" id="overlayFilter"></div>      <!-- Overlay brightness filter -->
+            <div id="sideNavBar" class="sideNav">
+                <div class="flexParent">
+                    <!-- Top of Nav Bar -->
+                    <div id="closeBtnSubParent">
+                        <div>
+                            <button class="closeBtn" onclick="closeNav()">
+                                &times;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Nav Pages -->
+                    <div class="flexParent navPagesFlex">
+                        <div>
+                            <a href="#contact" onclick="closeNav()">Contactanos</a>
+                        </div>
+
+                        <div>
+                            <a href="#services" onclick="closeNav()">Servicios</a>
+                        </div>
+
+                        <div>
+                            <a href="#about" onclick="closeNav()">Sobre Nosotros</a>
+                        </div>
+
+                        <div>
+                            <a href="" onclick="closeNav()">Preguntas Frecuentes</a>
+                        </div>
+                    </div>
                 </div>
-                -->
-
             </div>
 
 
             <!-- Whatsapp Button - Fixed Bottom Right -->
-            <button class="whatsappBtn fadeInLoad">
+            <button class="whatsappBtn bounce">
                 <img src="imgs/WhatsApp_logo.png" class="whatsappLogo">
             </button>
 
@@ -50,7 +68,12 @@
                 <div class="sectionOverlay">
                     <div class="contentContainer">
                         <h1 id="heroStatement">Dile adiós al papeleo infinito y a los dolores de cabeza.</h1>
-                        <p id="heroSubMessage">Somos tus aliados en <b>preparación de impuestos</b> y <b>servicios notariales</b>. Todo legal, rápido y con la confianza que tu familia y tu negocio necesitan.</p>
+
+                        <p id="heroSubMessage">
+                            Somos tus aliados en <b>preparación de impuestos</b> y 
+                            <b>servicios notariales</b>. Todo legal, rápido y con la confianza 
+                            que tu familia y tu negocio necesitan.
+                        </p>
 
 
                         <a href="#services">
@@ -65,8 +88,8 @@
 
             <!-- Contact Section -->
 
-            <section class="reveal" id="contact">
-                <div class="sectionOverlay">
+            <section id="contact">
+                <div class="reveal sectionOverlay">
                     <div class="contentContainer">
                         <h2 class="novaBold titleContainer hMarginBottom leftAlign">Habla con nosotros</h2>
                         <p class="marginBottomMedium leftAlign regularFontSize">
@@ -77,9 +100,23 @@
 
                         <div class="contactFlex">
                             <div class="contactItem">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="contactIcon">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+
+                                <!-- Phone Icon -->
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    width="20" 
+                                    height="20" 
+                                    viewBox="0 0 24 24" 
+                                    stroke-width="0" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    class="contactIcon">
+
+                                    <path 
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
                                 </svg>
+
                                 <div class="leftAlign">
                                     <div class="novaBold fitContent smallFontSize">Teléfono</div>
                                     <a href="tel:+19157301151" class="contactLink smallFontSize">(915) 730-1151</a>
@@ -87,27 +124,56 @@
                             </div>
 
                             <div class="contactItem">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20.5" height="20.5" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="contactIcon">
+
+                                <!-- Mail Letter Icon -->
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    width="20.5" 
+                                    height="20.5" 
+                                    viewBox="0 0 24 24" 
+                                    stroke-width="1.5" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    class="contactIcon">
+
                                     <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                                 </svg>
+
                                 <div class="leftAlign">
                                     <div class="novaBold fitContent smallFontSize">Correo Electrónico</div>
-                                    <a href="mailto:judy@lonngi.org" class="contactLink smallFontSize">judy@lonngi.org</a>
+                                    <a href="mailto:judy@lonngi.org" class="contactLink smallFontSize">
+                                        judy@lonngi.org
+                                    </a>
                                 </div>
                             </div>
                         </div>
+
                         <hr class="horizontalLine">
+
                         <p class="marginBottomMedium leftAlign regularFontSize">
                             Tambien puedes mandarnos mensaje por Whatsapp!
                         </p>
+
                         <button id="whatsappBtn" class="button">
                             <div id="insideBtnFlex">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="currentColor" id="whatsappIcon">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.704 1.456h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+
+                                <!-- Whatsapp Logo Icon inside contact button -->
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    width="25" 
+                                    height="25" 
+                                    viewBox="0 0 24 24" 
+                                    fill="currentColor" 
+                                    id="whatsappIcon">
+
+                                    <path 
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.704 1.456h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+
                                 </svg>
 
                                 Whatsapp
+
                             </div>
                         </button>
                     </div>
@@ -120,21 +186,41 @@
                 <div class="sectionOverlay">
                     <div class="invisibleContainer marginTopLarge">
                         <h2 class="reveal novaBold titleBody hMarginBottom">Nuestros Servicios Principales</h2>
-                        <p class="reveal regularFontSize" id="serviceSectionDesc">Ya sea que necesites declarar tus taxes a tiempo o validar un documento legal importante, aquí lo hacemos fácil, rápido y sin complicaciones.</p>
+                        <p class="reveal regularFontSize" id="serviceSectionDesc">
+                            Ya sea que necesites declarar tus taxes a tiempo o validar un documento 
+                            legal importante, aquí lo hacemos fácil, rápido y sin complicaciones.
+                        </p>
                     </div>
 
                     <!-- Tramites y Escrituras -->
 
                     <div class="reveal serviceContainer">
                         <h2 class="novaBold hMarginBottom serviceTitle">Trámites Inmobiliarios y Escrituras</h2>
-                        <p class="marginBottomSmall smallFontSize" >Validamos y gestionamos toda la documentación legal para la compra, venta o traspaso de sus propiedades.</p>
+                        <p class="marginBottomSmall smallFontSize" >
+                            Validamos y gestionamos toda la documentación legal para la compra, 
+                            venta o traspaso de sus propiedades.
+                        </p>
 
                         <div class="flexService">
                             <a href="">
                                 <div>Más información</div>
                             </a>
-                            <svg class="arrowPointingRight" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <svg 
+                                class="arrowPointingRight" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="16" 
+                                height="16" 
+                                viewBox="0 0 16 16" 
+                                fill="none">
+
+                                <path 
+                                    d="M3 8H13M9 4L13 8L9 12" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"
+                                />
                             </svg>
                         </div>
                     </div>
@@ -143,14 +229,31 @@
 
                     <div class="reveal serviceContainer">
                         <h2 class="novaBold hMarginBottom serviceTitle">Poderes Notariales (Power of Attorney)</h2>
-                        <p class="marginBottomSmall smallFontSize">Autorice a una persona de su confianza para realizar trámites legales, financieros o vehiculares en su nombre.</p>
+                        <p class="marginBottomSmall smallFontSize">
+                            Autorice a una persona de su confianza para realizar trámites legales, 
+                            financieros o vehiculares en su nombre.
+                        </p>
 
                         <div class="flexService">
                             <a href="">
                                 <div>Más información</div>
                             </a>
-                            <svg class="arrowPointingRight" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <svg 
+                                class="arrowPointingRight" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="16" 
+                                height="16" 
+                                viewBox="0 0 16 16" 
+                                fill="none">
+
+                                <path 
+                                    d="M3 8H13M9 4L13 8L9 12" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"
+                                />
                             </svg>
                         </div>
                     </div>
@@ -158,15 +261,35 @@
                     <!-- Certificación de Documentos y Ratificación de Firmas -->
 
                     <div class="reveal serviceContainer">
-                        <h2 class="novaBold hMarginBottom serviceTitle">Certificación de Documentos y Ratificación de Firmas</h2>
-                        <p class="marginBottomSmall smallFontSize">Certificamos copias y ratificamos firmas con sello oficial para que sus trámites avancen sin frenos.</p>
+                        <h2 class="novaBold hMarginBottom serviceTitle">
+                            Certificación de Documentos y Ratificación de Firmas
+                        </h2>
+
+                        <p class="marginBottomSmall smallFontSize">
+                            Certificamos copias y ratificamos firmas con sello oficial para que sus 
+                            trámites avancen sin frenos.
+                        </p>
 
                         <div class="flexService">
                             <a href="">
                                 <div>Más información</div>
                             </a>
-                            <svg class="arrowPointingRight" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <svg 
+                                class="arrowPointingRight" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="16" 
+                                height="16" 
+                                viewBox="0 0 16 16" 
+                                fill="none">
+
+                                <path 
+                                    d="M3 8H13M9 4L13 8L9 12" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"
+                                />
                             </svg>
                         </div>
                     </div>
@@ -175,27 +298,48 @@
 
                     <div class="reveal serviceContainer">
                         <h2 class="novaBold hMarginBottom serviceTitle">Declaración de Impuestos</h2>
-                        <p class="marginBottomSmall smallFontSize">Preparamos sus impuestos personales y de negocio de forma precisa para asegurar su máximo reembolso y total tranquilidad.</p>
+                        <p class="marginBottomSmall smallFontSize">
+                            Preparamos sus impuestos personales y de negocio de forma precisa para 
+                            asegurar su máximo reembolso y total tranquilidad.
+                        </p>
 
                         <div class="flexService">
                             <a href="">
                                 <div>Más información</div>
                             </a>
-                            <svg class="arrowPointingRight" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <svg 
+                                class="arrowPointingRight" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="16" 
+                                height="16" 
+                                viewBox="0 0 16 16" 
+                                fill="none">
+
+                                <path 
+                                    d="M3 8H13M9 4L13 8L9 12" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"
+                                />
                             </svg>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Por Que Nosotros Section -->
+            <!-- Quienes Somos - Section -->
 
-            <section id="WhyUs">
+            <section id="about">
                 <div class="reveal sectionOverlay">
                     <div class="reveal invisibleContainer marginTopLarge">
                         <h2 class="novaBold titleBody hMarginBottom">Quiénes Somos</h2>
-                        <p class="regularFontSize">Somos un negocio local de El Paso que cree en la atención personalizada. Nuestro objetivo es que no tengas que preocuparte por tus trámites; nosotros estamos aquí para hacer el proceso fácil y sin complicaciones.</p>
+                        <p class="regularFontSize">
+                            Somos un negocio local de El Paso que cree en la atención personalizada.
+                            Nuestro objetivo es que no tengas que preocuparte por tus trámites; nosotros 
+                            estamos aquí para hacer el proceso fácil y sin complicaciones.
+                        </p>
 
                         <div class="reveal contentContainer">
                             <div class="swiper">
@@ -218,10 +362,6 @@
         <footer>
             <section class="reveal sectionOverlay" id="footer">
                 <div id="footerContainer">
-                    <!--
-                    <img src="imgs/logo&name_no_whitespace.png" id="footerLogo">
-                    <p id="endNote">Confianza. Integridad. Compromiso.</p>
-                    -->
                     <ul class="marginBottomSmall" id="footerLinks">
                         <li><a>Sobre Nosotros</a></li>
                         <li><a>Servicios</a></li>

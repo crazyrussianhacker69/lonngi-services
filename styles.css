@@ -212,8 +212,16 @@ a:hover {
     width: 100%;
 }
 
+.flexParent {
+    display: flex;
+}
+
+.flexChild {
+    display: flex;
+}
+
 /************************************
-* Specific Elements
+* specific elements
 ************************************/
 #endNote {
     text-transform: uppercase;
@@ -289,6 +297,18 @@ a:hover {
 
 .whatsappBtn:hover {
     filter: brightness(0.7);
+}
+
+.bounce {
+    animation: bounce 15s ease infinite;
+}
+@keyframes bounce {
+    0%    { transform: translateY(0); }
+    0.7%  { transform: translateY(-15%); }
+    1.4%  { transform: translateY(0); }
+    1.8%  { transform: translateY(-7%); }
+    2.2%  { transform: translateY(0); }
+    100%  { transform: translateY(0); }
 }
 
 .whatsappLogo {
@@ -400,4 +420,86 @@ a:hover {
 
 #copyright {
     font-size: 14px;
+}
+
+/************************************
+* Side Nav Classes
+************************************/
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background-color: #dcdcab;
+    overflow-x: hidden;
+    transition: .5s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.darkFilter {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, .5);
+}
+
+.sideNav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    transition: .3s;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 12px 0 0;
+    text-align: right;
+}
+
+.sideNav a:hover {
+    color: purple;
+}
+
+@media screen and (max-height: 450px) {
+    .sideNav {padding-top: 15px;}
+    .sideNav a {font-size: 18px;}
+}
+
+/* Flex Items */
+
+.sideNav .flexParent {
+    flex-direction: column;
+    gap: .3em;
+}
+
+.flexParent #closeBtnSubParent {
+    display: flex;
+    justify-content: right;
+    height: 54px; 
+}
+
+#closeBtnSubParent div {
+    box-sizing: border-box;
+    height: 100%;
+    width: 36px;
+    padding-right: 12px;
+}
+
+.sideNav .closeBtn {
+    font-size: 35px;
+    height: 100%;
+    width: 100%;
+    background-color: #dcdcab;
+    color: black;
+    padding: 0;
+    border: none;
+    text-align: right;
+}
+
+.navPagesFlex {
+    gap: .5em;
 }

@@ -1,8 +1,14 @@
-const sidePanel = document.getElementById('sidePanel');
-document.getElementById('hamburgerBtn').onclick = () => {
-    sidePanel.classList.toggle('hidden');
-    console.log('it worked');
-};
+// Side Nav Behavior
+function openNav() {
+    document.getElementById('sideNavBar').style.width = '70%';
+    document.getElementById('overlayFilter').style.width = '100%';
+}
+
+function closeNav() {
+    document.getElementById('sideNavBar').style.width = '0';
+    document.getElementById('overlayFilter').style.width = '0';
+}
+
 
 // Scroll-Reveal Behavior
 const revealElements = document.querySelectorAll('.reveal');
@@ -19,6 +25,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 revealElements.forEach(element => {
     observer.observe(element);
 });
+
 
 // Business Images Loop
 // Using Swiper API
