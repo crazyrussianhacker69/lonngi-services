@@ -35,8 +35,9 @@ body {
     margin: 0;
     font-family: Proxima Nova;
     text-align: center;
-    background-color: rgb(245, 242, 219);
+    background: rgb(157,205,255);
     text-wrap: pretty;
+    color: black;
 }
 
 button{
@@ -97,10 +98,10 @@ a:hover {
 .contentContainer {
     margin: 0 12px;
     padding: 24px;
-    border: 1px solid rgb(0,0,0,0.2);
+    border: 1px solid rgb(0,0,0,.4);
     border-radius: 20px;
     box-shadow: 0 10px 14px -8px rgb(0, 0, 0, .5);
-    background-color: whitesmoke;
+    background: whitesmoke;
 }
 
 .hMarginBottom {
@@ -187,10 +188,11 @@ a:hover {
 .serviceContainer {
     margin: 24px 12px 0;
     padding: 24px;
-    border: 1px solid rgb(0,0,0,0.2);
+    border: 1px solid rgb(0,0,0,0.4);
     border-radius: 20px;
-    box-shadow: 0 10px 14px -8px rgb(0, 0, 0, .5);
+    box-shadow: 0 4px 10px 4px rgb(0, 0, 0,0.15);
     background-color: whitesmoke;
+    color: black;
     text-align: left;
 }
 
@@ -232,52 +234,18 @@ a:hover {
     width: 115px;
 }
 #footer {
-    background-color: rgb(166, 166, 84, .4);
+    background-color: #001b57b0;
     text-align: left;
+    color: white;
+    border-top: 1px solid gray;
 }
 
 #footerContainer {
     padding: 0 12px;
 }
 
-.topBar {
-    /* Position */
-    position: sticky;
-    top: 0;
-    z-index: 1;
-
-    /* Sizing */
-    height: 30px;
-    padding: 12px;
-
-    /* Style */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    background-color: rgb(80, 85, 45, 0.5);
-    backdrop-filter: blur(15px);
-}
-
-.topBar button {
-    /* Size */
-    height: 100%;
-    
-    /* Position */
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    translate: 0 -50%;
-    
-    /* Style */
-    border: none;
-    background-color: rgb(0, 0, 0, 0);
-    cursor: pointer;
-}
-
-.topBar img {
-    display: inline-block;
-    height: 30px;
-    position: absolute;
-    left: 8px;
-    padding: 1px 6px;
+#footerContainer a {
+    color: black;
 }
 
 .whatsappBtn {
@@ -335,8 +303,8 @@ a:hover {
 }
 
 #exploreServices {
-    background-color: rgb(244, 155, 155);
-    color: white;
+    color: whitesmoke;
+    background: #cb8211;
 }
 
 .hero button:hover {
@@ -423,6 +391,58 @@ a:hover {
 }
 
 /************************************
+* Top Bar Styling
+************************************/
+.topBar h1 {
+    margin: 0;
+    align-self: center;
+    display: none;
+}
+
+.topBar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 54px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.15);
+    background-color: rgb(145, 199, 255, 0.6);
+    backdrop-filter: blur(25px);
+}
+
+.topBarNavBarIcon {
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+#containerAlignBtn {
+    height: 30px;
+    width: 30px;
+    align-self: center;
+}
+
+#containerAlignBtn button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+    cursor: pointer;
+    padding: 0;
+}
+
+#companyLogoTopBar {
+    align-self: center;
+    height: 54px;
+    width: 54px;
+    margin-left: 6px;
+}
+
+.topBar img {
+    height: 54px;
+    width: 54px;
+}
+
+
+/************************************
 * Side Nav Classes
 ************************************/
 .sideNav {
@@ -432,7 +452,7 @@ a:hover {
     z-index: 3;
     top: 0;
     right: 0;
-    background-color: #dcdcab;
+    background-color: #0e132b;
     overflow-x: hidden;
     transition: .5s;
     text-transform: uppercase;
@@ -452,7 +472,7 @@ a:hover {
 .sideNav a {
     text-decoration: none;
     font-size: 25px;
-    color: black;
+    color: white;
     transition: .3s;
     display: block;
     box-sizing: border-box;
@@ -493,8 +513,8 @@ a:hover {
     font-size: 35px;
     height: 100%;
     width: 100%;
-    background-color: #dcdcab;
-    color: black;
+    background-color: #0e132b;
+    color: white;
     padding: 0;
     border: none;
     text-align: right;
