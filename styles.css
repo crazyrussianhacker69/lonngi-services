@@ -35,7 +35,7 @@ body {
     margin: 0;
     font-family: Proxima Nova;
     text-align: center;
-    background: rgb(157,205,255);
+    background: rgb(164,193,223);
     text-wrap: pretty;
     color: black;
 }
@@ -405,7 +405,7 @@ a:hover {
     z-index: 1;
     height: 54px;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.15);
-    background-color: rgb(145, 199, 255, 0.6);
+    background-color: rgb(0,0,0,0.15);
     backdrop-filter: blur(25px);
 }
 
